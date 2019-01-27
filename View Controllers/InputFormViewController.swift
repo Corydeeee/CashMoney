@@ -11,19 +11,30 @@ import TextFieldEffects
 
 class InputFormViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet var ageTextField : HoshiTextField!
-    @IBOutlet var incomeTextField : HoshiTextField!
-    @IBOutlet var retirementTextField : HoshiTextField!
+    @IBOutlet var ageTextField : HoshiTextField?
+    @IBOutlet var incomeTextField : HoshiTextField?
+    @IBOutlet var startingIncomeTextField : HoshiTextField?
+    @IBOutlet var nextButton : UIButton!
+    let mainDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    @IBAction func pressReady(){
+        mainDelegate.startingAmount = Float(startingIncomeTextField?.text ?? "0")
+        mainDelegate.age = Int(ageTextField?.text ?? "0")
+        mainDelegate.monthlyIncome = Float(incomeTextField?.text ?? "0")
+        
+        self.performSegue(withIdentifier: "arSegue", sender: self)
+    }
 
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ageTextField.delegate = self
-        incomeTextField.delegate = self
-        retirementTextField.delegate = self
+        ageTextField!.delegate = self
+        incomeTextField!.delegate = self
+        startingIncomeTextField!.delegate = self
+        nextButton.layer.cornerRadius = 7
+        nextButton.clipsToBounds = true
 
-        
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {    //delegate method
