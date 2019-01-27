@@ -20,6 +20,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var shareButton : UIButton!
     @IBOutlet var moneyText1 : UILabel!
     @IBOutlet var moneyText2 : UILabel!
+    @IBOutlet var cameraButton : UIButton!
     
     let mainDelegate = UIApplication.shared.delegate as! AppDelegate
     var age : Int?
@@ -63,6 +64,18 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     }
     
     @IBAction func sharePhoto ( sender : Any){
+        detectedLabel.isHidden = true
+        placeImage.isHidden = true
+        doStuffButton.isHidden = true
+        removeStuffButton.isHidden = true
+        shareButton.isHidden = true
+        moneyText1.isHidden = true
+        moneyText2.isHidden = true
+        cameraButton.isHidden = false
+
+    }
+    
+    @IBAction func takePhoto (){
         let bounds = UIScreen.main.bounds
         UIGraphicsBeginImageContextWithOptions(bounds.size, true, 0.0)
         view!.drawHierarchy(in: bounds, afterScreenUpdates: false)
@@ -72,11 +85,17 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         
         let activityViewController = UIActivityViewController(activityItems: [img!], applicationActivities: nil)
         present(activityViewController, animated: true, completion: nil)
+        
+        doStuffButton.isHidden = false
+        removeStuffButton.isHidden = false
+        shareButton.isHidden = false
+        cameraButton.isHidden = true
     }
     
     @IBAction func placeMoney(sender : Any){
         
         var counter = 0
+        var timeInterval = 0.05
         
         if moneyStatus == 1{
             moneyCount = Int(ceil(firstYear! / 100))
@@ -90,18 +109,21 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
             moneyCount = Int(ceil(tenYear! / 100))
             moneyText1.text = String(format: "$%.02f", tenYear!)
             moneyText2.text = "after 10 years"
+            timeInterval = 0.025
         }
         else if(moneyStatus == 3){
             clearScreen()
             moneyCount = Int(ceil(twentyFiveYear! / 100))
             moneyText1.text = String(format: "$%.02f", twentyFiveYear!)
             moneyText2.text = "after 25 years"
+            timeInterval = 0.001
+
         }
         else if(moneyStatus == 4){
              self.performSegue(withIdentifier: "lastScreenSegue", sender: self)
         }
         
-        Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { timer in
+        Timer.scheduledTimer(withTimeInterval: timeInterval, repeats: true) { timer in
             counter += 1
             let box = SCNBox(width: 0.05, height: 0.05, length: 0.1, chamferRadius: 0)
             _ = SCNNode(geometry: box)
@@ -138,7 +160,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
             cashNode!.name = "money"
             self.sceneView.scene.rootNode.addChildNode(cashNode!)
             
-            let moveBy = SCNAction.move(to: SCNVector3(boxX,boxY,boxZ), duration: 0.75)
+            let moveBy = SCNAction.move(to: SCNVector3(boxX,boxY,boxZ), duration: 0.5)
             cashNode?.runAction(moveBy)
             
             if counter >= (self.moneyCount! - 1) {

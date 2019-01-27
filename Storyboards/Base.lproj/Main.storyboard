@@ -13,11 +13,14 @@
         <array key="OpenSans-Bold.ttf">
             <string>OpenSans-Bold</string>
         </array>
-        <array key="OpenSans-ExtraBold.ttf">
-            <string>OpenSans-ExtraBold</string>
+        <array key="OpenSans-LightItalic.ttf">
+            <string>OpenSans-LightItalic</string>
         </array>
         <array key="OpenSans-Regular.ttf">
             <string>OpenSans-Regular</string>
+        </array>
+        <array key="OpenSans-SemiBoldItalic.ttf">
+            <string>OpenSans-SemiBoldItalic</string>
         </array>
         <array key="SF-Pro-Text-Bold.otf">
             <string>SFProText-Bold</string>
@@ -52,34 +55,27 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="x3X-ZV-FIs" kind="presentation" id="hHE-Rb-Pgt"/>
+                                    <segue destination="x3X-ZV-FIs" kind="presentation" modalTransitionStyle="flipHorizontal" id="hHE-Rb-Pgt"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SEE THE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcF-D3-E5d">
-                                <rect key="frame" x="95" y="406" width="171" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="43"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="VALUE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yy9-4R-jIt">
-                                <rect key="frame" x="56" y="439" width="248" height="104"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="OpenSans-ExtraBold" family="Open Sans" pointSize="76"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="o f   s t a r t i n g   s m a l l" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6YX-Hw-Ekb">
-                                <rect key="frame" x="76" y="541" width="209" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rc-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="0jm-32-gJy">
                                 <rect key="frame" x="-1" y="144" width="376" height="254"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="See the value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wce-xA-jX2">
+                                <rect key="frame" x="0.0" y="576" width="375" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans-SemiBoldItalic" family="Open Sans" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="of starting small." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDn-LQ-NjV">
+                                <rect key="frame" x="0.0" y="635" width="375" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans-LightItalic" family="Open Sans" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="g5B-5E-gFL"/>
@@ -120,7 +116,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="dUl-Re-dUQ" kind="presentation" id="KY5-ga-XVl"/>
+                                    <segue destination="dUl-Re-dUQ" kind="presentation" modalTransitionStyle="flipHorizontal" id="KY5-ga-XVl"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="art_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="FFD-MC-sk1">
@@ -182,7 +178,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Qq2-81-Kro" kind="presentation" id="bEf-TU-OEq"/>
+                                    <segue destination="Qq2-81-Kro" kind="presentation" modalTransitionStyle="flipHorizontal" id="bEf-TU-OEq"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Small is mighty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OI4-CA-Nad">
@@ -244,7 +240,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="1YR-yD-gjA" kind="presentation" id="P4e-qq-l1O"/>
+                                    <segue destination="1YR-yD-gjA" kind="presentation" modalTransitionStyle="flipHorizontal" id="P4e-qq-l1O"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="See the value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YfM-4x-4On">
@@ -422,7 +418,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="What's your monthly income?" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="uag-xm-cMP" customClass="HoshiTextField" customModule="TextFieldEffects">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="How much can you contribute monthly?" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="uag-xm-cMP" customClass="HoshiTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="16" y="290" width="343" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.33000000000000002" alpha="1" colorSpace="calibratedWhite"/>
@@ -482,7 +478,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="share.png"/>
                                 <connections>
-                                    <action selector="removeMoneyWithSender:" destination="OlP-wQ-yr5" eventType="touchUpInside" id="i4c-2f-XTo"/>
                                     <action selector="sharePhotoWithSender:" destination="OlP-wQ-yr5" eventType="touchUpInside" id="xX2-Sy-K5X"/>
                                 </connections>
                             </button>
@@ -536,6 +531,14 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6t4-n4-0dd">
+                                <rect key="frame" x="154" y="676" width="66" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="shutter.png"/>
+                                <connections>
+                                    <action selector="takePhoto" destination="OlP-wQ-yr5" eventType="touchUpInside" id="HZs-Qk-47G"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -547,6 +550,7 @@
                         <viewLayoutGuide key="safeArea" id="Y2J-5N-mRU"/>
                     </view>
                     <connections>
+                        <outlet property="cameraButton" destination="6t4-n4-0dd" id="vqG-xy-0uM"/>
                         <outlet property="detectedLabel" destination="5bf-1d-F5J" id="veb-Ny-seK"/>
                         <outlet property="doStuffButton" destination="mbb-If-WI9" id="2TI-Td-GDz"/>
                         <outlet property="moneyText1" destination="9bH-ec-eXJ" id="Vdy-09-gFd"/>
@@ -572,5 +576,6 @@
         <image name="rc-logo.png" width="1080" height="908"/>
         <image name="restart.png" width="86" height="96"/>
         <image name="share.png" width="44" height="47"/>
+        <image name="shutter.png" width="66" height="66"/>
     </resources>
 </document>
